@@ -16,6 +16,7 @@ function calculateForward() {
   //   document.getElementById("onlinePrice").textContent = "-";
   //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
+    document.getElementById("cashback").textContent = "-";
     return;
   }
 
@@ -37,6 +38,10 @@ function calculateReverse() {
   const onlinePrice = parseFloat(document.getElementById("onlineInput").value);
   if (isNaN(onlinePrice)) {
     document.getElementById("revDpPrice").textContent = "-";
+    document.getElementById("revMspPrice").textContent = "-";
+    document.getElementById("revMsptenPrice").textContent = "-";
+    document.getElementById("revPurchasePrice").textContent = "-";
+    document.getElementById("revPurchaseTenPrice").textContent = "-";
     return;
   }
 
