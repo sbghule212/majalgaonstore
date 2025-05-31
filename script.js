@@ -16,7 +16,6 @@ function calculateForward() {
   //   document.getElementById("onlinePrice").textContent = "-";
   //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
-    document.getElementById("cashback").textContent = "-";
     return;
   }
 
@@ -25,13 +24,11 @@ function calculateForward() {
   const onlinePrice = Math.round(dpPrice * 0.9);
   const retailPrice = offlinePrice + 100;
   const twentypPrice = Math.round(dpPrice * 0.8);
-  const cashback = dpPrice - twentypPrice;
 
   // document.getElementById("offlinePrice").textContent = offlinePrice;
   // document.getElementById("onlinePrice").textContent = onlinePrice;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
-  document.getElementById("cashback").textContent = cashback;
 }
 
 function calculateReverse() {
