@@ -11,10 +11,10 @@ function switchTab(tabId) {
 
 function calculateForward() {
   const dpPrice = parseFloat(document.getElementById("dpPrice").value);
-  if (isNaN(dpPrice)) {
-    document.getElementById("offlinePrice").textContent = "-";
-    document.getElementById("onlinePrice").textContent = "-";
-    document.getElementById("retailPrice").textContent = "-";
+  // if (isNaN(dpPrice)) {
+  //   document.getElementById("offlinePrice").textContent = "-";
+  //   document.getElementById("onlinePrice").textContent = "-";
+  //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
     return;
   }
@@ -25,9 +25,9 @@ function calculateForward() {
   const retailPrice = offlinePrice + 100;
   const twentypPrice = Math.round(dpPrice * 0.8);
 
-  document.getElementById("offlinePrice").textContent = offlinePrice;
-  document.getElementById("onlinePrice").textContent = onlinePrice;
-  document.getElementById("retailPrice").textContent = retailPrice;
+  // document.getElementById("offlinePrice").textContent = offlinePrice;
+  // document.getElementById("onlinePrice").textContent = onlinePrice;
+  // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
 }
 
