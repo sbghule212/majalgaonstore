@@ -11,7 +11,7 @@ function switchTab(tabId) {
 
 function calculateForward() {
   const dpPrice = parseFloat(document.getElementById("dpPrice").value);
-  // if (isNaN(dpPrice)) {
+  if (isNaN(dpPrice)) {
   //   document.getElementById("offlinePrice").textContent = "-";
   //   document.getElementById("onlinePrice").textContent = "-";
   //   document.getElementById("retailPrice").textContent = "-";
