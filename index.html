@@ -12,15 +12,15 @@
     </header>
 
     <div class="tabs">
-      <button class="tab" onclick="switchTab('forward')">
+      <button class="tab active" onclick="switchTab('forward')">
         DP > Offer
       </button>
       <button class="tab" onclick="switchTab('reverse')">Offer > DP</button>
-      <button class="tab active" onclick="switchTab('message')">Post</button>
+      <button class="tab" onclick="switchTab('message')">Post</button>
     </div>
 
     <!-- Forward Calculator -->
-  <div id="forward" class="tab-content">
+  <div id="forward" class="tab-content active">
      <div class="abc">
         <label for="dpPrice">Enter Dp Price:</label>
         <input
@@ -60,7 +60,7 @@
 
     
     <!-- Post Generator -->
-<div id="message" class="tab-content active">
+<div id="message" class="tab-content">
   <div class="abc">
         <label for="storeInput">Mega Store Name:</label>
         <input
