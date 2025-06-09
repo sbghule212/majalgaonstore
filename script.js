@@ -93,19 +93,19 @@ function generateMessage() {
   const profit = Math.floor(totalSale * 0.1);
 
   // Get user input values
-  const sareeSale2 =
-    parseInt(document.getElementById("sareeSaleInput2").value) || 0;
-  const otherSale2 =
-    parseInt(document.getElementById("otherSaleInput2").value) || 0;
-  const expenses2 =
-    parseInt(document.getElementById("expensesInput2").value) || 0;
+  const onlineSale =
+    parseInt(document.getElementById("onlineSaleInput").value) || 0;
+  const offlineSale =
+    parseInt(document.getElementById("offlineSaleInput").value) || 0;
+  const storeSale =
+    parseInt(document.getElementById("storeSaleInput").value) || 0;
 
-  const totalSale2 = sareeSale2 + otherSale2;
+  const totalSale2 = onlineSale + offlineSale + storeSale;
 
   // const store = document.getElementById("storeInput").value || 0;
 
   const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
-  const customerMsg = `*Majalagaon Womens Wear*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale2}/-\n2. Jwellery,Purse Sale - ${otherSale2}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
+  const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n\n2. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
  document.getElementById("messageOutput2").value = customerMsg;
