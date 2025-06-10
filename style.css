@@ -4,13 +4,13 @@
   --card-bg: #ffffff;
   --main-bg: hsl(216, 12%, 8%);
   --card-bg: hsl(213, 19%, 18%);
-/*   --White: hsl(0, 0%, 100%); */
+  /*   --White: hsl(0, 0%, 100%); */
   box-sizing: border-box;
   --Orange-500: hsl(25, 97%, 53%);
---White: hsl(0, 100%, 100%);
---Grey-500: hsl(217, 12%, 63%);
---Grey-900: hsl(213, 19%, 18%);
---Grey-950: hsl(216, 12%, 8%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-500: hsl(217, 12%, 63%);
+  --Grey-900: hsl(213, 19%, 18%);
+  --Grey-950: hsl(216, 12%, 8%);
 }
 
 body {
@@ -61,7 +61,7 @@ header h1 {
 
 .tab-content {
   box-sizing: border-box;
-  display: none;     
+  display: none;
   width: 100%;
   max-width: 450px;
 }
@@ -69,6 +69,7 @@ header h1 {
 .abc {
   background: var(--card-bg);
   padding: 25px;
+  padding-top: 12px;
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
@@ -110,13 +111,45 @@ input[type="number"]:focus {
 
 .copybutton {
   margin-top: 10px;
-            padding: 10px 20px;
-            background: var(--main-bg);
-            color: var(--white);
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
+  padding: 10px 20px;
+  background: var(--main-bg);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.togglebutton {
+  width: 100%;
+  max-width: 450px;
+  padding: 12px 16px;
+  background: var(--card-bg);
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  color: var(--White);
+}
+
+.expanded {
+  border-radius: 16px 16px 0 0;
+}
+
+.togglebutton .arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.sale-section {
+  border-radius: 0 0 16px 16px;
 }
 
 @media screen and (max-width: 480px) {
