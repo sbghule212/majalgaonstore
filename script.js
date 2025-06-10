@@ -12,9 +12,9 @@ function switchTab(tabId) {
 function calculateForward() {
   const dpPrice = parseFloat(document.getElementById("dpPrice").value);
   if (isNaN(dpPrice)) {
-  //   document.getElementById("offlinePrice").textContent = "-";
-  //   document.getElementById("onlinePrice").textContent = "-";
-  //   document.getElementById("retailPrice").textContent = "-";
+    //   document.getElementById("offlinePrice").textContent = "-";
+    //   document.getElementById("onlinePrice").textContent = "-";
+    //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
     return;
   }
@@ -45,8 +45,8 @@ function calculateReverse() {
   //  const base = approxDpPrice * 0.75;
   const oofflinePrice = onlinePrice - 60;
   const approxDpPrice = Math.round(onlinePrice / 0.9);
-  const approxMspPrice = Math.ceil((1.10 * (onlinePrice - 100)) / 1.30);
-  const approxMspTenPrice = Math.ceil((1.10 * (onlinePrice - 10)) / 1.30);
+  const approxMspPrice = Math.ceil((1.1 * (onlinePrice - 100)) / 1.3);
+  const approxMspTenPrice = Math.ceil((1.1 * (onlinePrice - 10)) / 1.3);
   const purchasePrice = Math.round((onlinePrice - 200) / 1.15);
 
   document.getElementById("revDpPrice").textContent = approxDpPrice;
@@ -102,14 +102,26 @@ function generateMessage() {
 
   const totalSale2 = onlineSale + offlineSale + storeSale;
 
+  // Get user input values
+  const sareeSale3 =
+    parseInt(document.getElementById("sareeSale3Input").value) || 0;
+  const otherSale3 =
+    parseInt(document.getElementById("otherSale3Input").value) || 0;
+  const expenses3 =
+    parseInt(document.getElementById("expenses3Input").value) || 0;
+
+  const totalSale3 = sareeSale3 + otherSale3;
+
   // const store = document.getElementById("storeInput").value || 0;
 
   const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
+  const majalgaonSale = `*Majalgaon Womens Wear🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
- document.getElementById("messageOutput2").value = customerMsg;
+  document.getElementById("messageOutput2").value = customerMsg;
   document.getElementById("messageOutput3").value = reportMsg;
+  document.getElementById("messageOutput4").value = majalgaonSale;
 }
 
 function copyMessage(id) {
@@ -118,4 +130,9 @@ function copyMessage(id) {
   textarea.setSelectionRange(0, 99999);
   document.execCommand("copy");
   alert("Message copied to clipboard!");
+}
+
+function toggleSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  section.style.display = section.style.display === "none" ? "block" : "none";
 }
