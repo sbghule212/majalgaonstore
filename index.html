@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <title>Majalgaon Store</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-        <h1>Majalgaon Store</h1>
+      <h1>Majalgaon Store</h1>
     </header>
 
     <div class="tabs">
@@ -20,8 +20,8 @@
     </div>
 
     <!-- Forward Calculator -->
-  <div id="forward" class="tab-content active">
-     <div class="abc">
+    <div id="forward" class="tab-content active">
+      <div class="abc">
         <label for="dpPrice">Enter Dp Price:</label>
         <input
           type="number"
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Reverse Calculator -->
     <div id="reverse" class="tab-content">
       <div class="abc">
@@ -47,87 +47,91 @@
           type="number"
           id="onlineInput"
           placeholder="Enter price"
-          oninput="calculateReverse()"
-        />
+          oninput="calculateReverse()" />
         <div class="output">
-          <p><strong>Approx. Dp Price:</strong> <span id="revDpPrice">-</span></p>
+          <p>
+            <strong>Approx. Dp Price:</strong> <span id="revDpPrice">-</span>
+          </p>
           <p><strong>MSP Price:</strong> <span id="revMspPrice">-</span></p>
-          <p><strong>MSP10 Price:</strong> <span id="revMsptenPrice">-</span></p>
-          <p><strong>Pur. Price:</strong> <span id="revPurchasePrice">-</span></p>
+          <p>
+            <strong>MSP10 Price:</strong> <span id="revMsptenPrice">-</span>
+          </p>
+          <p>
+            <strong>Pur. Price:</strong> <span id="revPurchasePrice">-</span>
+          </p>
         </div>
       </div>
     </div>
 
-    
     <!-- Post Generator -->
-<div id="message" class="tab-content">
-  <div class="abc">
+    <div id="message" class="tab-content">
+      <div class="abc">
         <label for="storeInput">Mega Store Name:</label>
         <input
           type="text"
           id="storeInput"
           placeholder="Majalgaon Mega Store"
-          oninput="generateMessage()"
-        />
-  
+          oninput="generateMessage()" />
+
         <label for="productInput">Product Name:</label>
         <input
           type="text"
           id="productInput"
           placeholder="Jewellery"
-          oninput="generateMessage()"
-        />
-  
+          oninput="generateMessage()" />
+
         <label for="dpInput">DP Price:</label>
         <input
           type="number"
           id="dpInput"
           placeholder="1199"
-          oninput="generateMessage()"
-        />
-  
+          oninput="generateMessage()" />
+
         <label for="contactInput">Contact Number:</label>
         <input
           type="text"
           id="contactInput"
           placeholder="7775034111"
-          oninput="generateMessage()"
-        />
-    
-          <label>Distributor Post:</label>
-          <textarea
-            id="messageOutput1"
-            rows="10"
-            readonly
-            style="
-              width: 93%;
-              background: var(--card-bg);
-              color: var(--white);
-              padding: 10px;
-              font-size: 16px;
-              border-radius: 8px;
-              border: 1px solid #ccc;
-            "
-          ></textarea>
-          <button
-            onclick="copyMessage('messageOutput1')"
-            class="copybutton"
-          >
-            Copy Distributor Post
-          </button>
-  </div>
-        
-    <div style="margin-top:20px;box-sizing:" class="abc">
-        <label style="margin-top: 25px; display: block">Sale Report:</label>
+          oninput="generateMessage()" />
+
+        <label>Distributor Post:</label>
+        <textarea
+          id="messageOutput1"
+          rows="10"
+          readonly
+          style="
+            width: 93%;
+            background: var(--card-bg);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+          "></textarea>
+        <button onclick="copyMessage('messageOutput1')" class="copybutton">
+          Copy Distributor Post
+        </button>
+      </div>
+
+      <button
+        onclick="toggleSection('saleReport1')"
+        class="togglebutton expanded"
+        style="margin-top: 20px">
+        <span class="arrow">▼</span>
+        <span>Majalgaon Mega Store</span>
+      </button>
+
+      <div id="saleReport1" style="display: none" class="abc sale-section">
+        <label style="display: block">Sale Report:</label>
         <label>Saree Sale:</label>
         <input type="number" id="sareeSaleInput" oninput="generateMessage()" />
-  
+
         <label>Jewellery/Purse Sale:</label>
         <input type="number" id="otherSaleInput" oninput="generateMessage()" />
-  
+
         <label>Today’s Expenses:</label>
         <input type="number" id="expensesInput" oninput="generateMessage()" />
-  
+
         <textarea
           id="messageOutput3"
           rows="9"
@@ -140,27 +144,34 @@
             font-size: 16px;
             border-radius: 8px;
             border: 1px solid #ccc;
-          "
-        ></textarea>
-        <button
-          onclick="copyMessage('messageOutput3')"
-          class="copybutton"
-        >
+          "></textarea>
+        <button onclick="copyMessage('messageOutput3')" class="copybutton">
           Copy Sale Report
         </button>
-    </div>
+      </div>
 
-  <div style="margin-top:20px;box-sizing:" class="abc">
-        <label style="margin-top: 25px; display: block">Sale Report:</label>
+      <button
+        onclick="toggleSection('saleReport2')"
+        class="togglebutton expanded"
+        style="margin-top: 20px">
+        <span class="arrow">▼</span>
+        <span>Online/Offline</span>
+      </button>
+
+      <div id="saleReport2" style="display: none" class="abc sale-section">
+        <label style="display: block">Sale Report:</label>
         <label>Online Sale:</label>
         <input type="number" id="onlineSaleInput" oninput="generateMessage()" />
-  
+
         <label>Offline Sale:</label>
-        <input type="number" id="offlineSaleInput" oninput="generateMessage()" />
-  
+        <input
+          type="number"
+          id="offlineSaleInput"
+          oninput="generateMessage()" />
+
         <label>Store Sale:</label>
         <input type="number" id="storeSaleInput" oninput="generateMessage()" />
-  
+
         <textarea
           id="messageOutput2"
           rows="9"
@@ -173,18 +184,49 @@
             font-size: 16px;
             border-radius: 8px;
             border: 1px solid #ccc;
-          "
-        ></textarea>
-        <button
-          onclick="copyMessage('messageOutput2')"
-          class="copybutton"
-        >
+          "></textarea>
+        <button onclick="copyMessage('messageOutput2')" class="copybutton">
           Copy Sale Report
         </button>
-    </div>
+      </div>
 
-  
-</div>
+      <button
+        onclick="toggleSection('saleReport3')"
+        class="togglebutton expanded"
+        style="margin-top: 20px">
+        <span class="arrow">▼</span>
+        <span>Majalgaon Womens Wear</span>
+      </button>
+
+      <div id="saleReport3" style="display: none" class="abc sale-section">
+        <label style="display: block">Sale Report:</label>
+        <label>Saree Sale:</label>
+        <input type="number" id="sareeSale3Input" oninput="generateMessage()" />
+
+        <label>Jewellery/Purse Sale:</label>
+        <input type="number" id="otherSale3Input" oninput="generateMessage()" />
+
+        <label>Today’s Expenses:</label>
+        <input type="number" id="expenses3Input" oninput="generateMessage()" />
+
+        <textarea
+          id="messageOutput4"
+          rows="9"
+          readonly
+          style="
+            width: 93%;
+            padding: 10px;
+            background: var(--card-bg);
+            color: var(--white);
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+          "></textarea>
+        <button onclick="copyMessage('messageOutput3')" class="copybutton">
+          Copy Sale Report
+        </button>
+      </div>
+    </div>
 
     <footer
       style="
@@ -193,11 +235,10 @@
         padding: 20px 10px;
         color: #888;
         font-size: 0.9rem;
-      "
-    >
+      ">
       Created by Shivraj Ghule
     </footer>
-<!--      <p>Majalgaon Store</p> -->
+    <!--      <p>Majalgaon Store</p> -->
     <script src="/script.js"></script>
   </body>
 </html>
