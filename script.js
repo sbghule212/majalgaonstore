@@ -32,7 +32,7 @@ function calculateForward() {
   // document.getElementById("onlinePrice").textContent = onlinePrice;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
-  document.getElementById("msp").textContent = mspPrice;
+  document.getElementById("msp").textContent = purchasePrice;
 }
 
 function calculateReverse() {
