@@ -122,7 +122,7 @@ function generateMessage() {
 
   const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
-  const majalgaonSale = `*Majalgaon Womens Wear🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
+  const majalgaonSale = `*Majalgaon Womens Wear🏪*\n\n${dateStr} ⏰\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
   document.getElementById("messageOutput2").value = customerMsg;
