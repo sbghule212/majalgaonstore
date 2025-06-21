@@ -16,7 +16,7 @@ function calculateForward() {
     //   document.getElementById("onlinePrice").textContent = "-";
     //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
-    document.getElementById("profit").textContent = "-";
+    document.getElementById("msp").textContent = "-";
     return;
   }
 
@@ -25,13 +25,14 @@ function calculateForward() {
   const onlinePrice = Math.round(dpPrice * 0.9);
   const retailPrice = offlinePrice + 100;
   const twentypPrice = Math.round(dpPrice * 0.8);
-  const profit = ((dpPrice / (100 + dpPrice)) * 100).toFixed(2);
+  const purchasePrice = Math.round(dpPrice / 1.485 );
+  const mspPrice = Math.round(purchasePrice * 1.35;
 
   // document.getElementById("offlinePrice").textContent = offlinePrice;
   // document.getElementById("onlinePrice").textContent = onlinePrice;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
-  document.getElementById("profit").textContent = profit;
+  document.getElementById("msp").textContent = mspPrice;
 }
 
 function calculateReverse() {
