@@ -26,13 +26,13 @@ function calculateForward() {
   const retailPrice = offlinePrice + 100;
   const twentypPrice = Math.round(dpPrice * 0.8);
   const purchasePrice = Math.round(dpPrice / 1.485 );
-  const mspPrice = Math.round(purchasePrice * 1.35);
+  const mspPrice = Math.round(purchasePrice * 1.10);
 
   // document.getElementById("offlinePrice").textContent = offlinePrice;
   // document.getElementById("onlinePrice").textContent = onlinePrice;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
-  document.getElementById("msp").textContent = purchasePrice;
+  document.getElementById("msp").textContent = mspPrice;
 }
 
 function calculateReverse() {
