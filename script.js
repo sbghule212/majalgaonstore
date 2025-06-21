@@ -17,6 +17,7 @@ function calculateForward() {
     //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("twentypPrice").textContent = "-";
     document.getElementById("msp").textContent = "-";
+    document.getElementById("purchasePrice").textContent = "-";
     return;
   }
 
@@ -32,6 +33,7 @@ function calculateForward() {
   // document.getElementById("onlinePrice").textContent = onlinePrice;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("twentypPrice").textContent = twentypPrice;
+  document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = mspPrice;
 }
 
