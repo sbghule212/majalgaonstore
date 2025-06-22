@@ -21,10 +21,10 @@ function calculateForward() {
   }
 
   const base = dpPrice * 0.75;
+  const purchasePrice = Math.round(dpPrice / 1.5 );
   const offlinePrice = Math.round(purchasePrice * 1.4);
   const onlinePrice = Math.round(purchasePrice * 1.3);
   const retailPrice = offlinePrice + 100;
-  const purchasePrice = Math.round(dpPrice / 1.5 );
   const mspPrice = Math.round(purchasePrice * 1.10);
 
   document.getElementById("offlinePrice").textContent = offlinePrice;
