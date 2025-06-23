@@ -12,23 +12,29 @@ function switchTab(tabId) {
 function calculateForward() {
   const dpPrice = parseFloat(document.getElementById("dpPrice").value);
   if (isNaN(dpPrice)) {
-      document.getElementById("offlinePrice").textContent = "-";
-      document.getElementById("onlinePrice").textContent = "-";
+      document.getElementById("homeShopee").textContent = "-";
+      document.getElementById("ltCustomer").textContent = "-";
     //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("msp").textContent = "-";
     document.getElementById("purchasePrice").textContent = "-";
     return;
   }
 
+  function roundToNearest5(value) {
+  return Math.round(value / 5) * 5;
+}
+
   const base = dpPrice * 0.75;
   const purchasePrice = Math.round(dpPrice / 1.5 );
   const offlinePrice = Math.round(purchasePrice * 1.4);
   const onlinePrice = Math.round(purchasePrice * 1.3);
   const retailPrice = offlinePrice + 100;
-  const mspPrice = Math.round(purchasePrice * 1.15);
+  const msp = roundToNearest5(taxablePrice * 1.15);
+  const homeShopee = roundToNearest5(msp * 1.10);
+  const ltCustomer = roundToNearest5(homeShopee * 1.10);
 
-  document.getElementById("offlinePrice").textContent = offlinePrice;
-  document.getElementById("onlinePrice").textContent = onlinePrice;
+  document.getElementById("offlinePrice").textContent = homeShopee;
+  document.getElementById("onlinePrice").textContent = ltCustomer;
   // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = mspPrice;
