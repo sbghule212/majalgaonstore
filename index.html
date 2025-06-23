@@ -192,14 +192,15 @@
 
       <div id="saleReport3" style="display: none" class="abc sale-section">
         <label style="display: block">Sale Report:</label>
+        
+        <label>Store Name:</label>
+        <input type="number" id="store3Input" oninput="generateMessage()" />
+        
         <label>Saree Sale:</label>
         <input type="number" id="sareeSale3Input" oninput="generateMessage()" />
 
         <label>Jewellery/Purse Sale:</label>
         <input type="number" id="otherSale3Input" oninput="generateMessage()" />
-
-<!--         <label>Today’s Expenses:</label>
-        <input type="number" id="expenses3Input" oninput="generateMessage()" /> -->
 
         <textarea
           id="messageOutput4"
