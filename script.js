@@ -29,7 +29,7 @@ function mround(value, multiple) {
 
   const base = dpPrice * 0.75;
   const purchasePrice = Math.round(dpPrice / 1.5);
-  const msp = roundUpToNearest5(purchasePrice * 1.15, 5);
+  const msp = mround(purchasePrice * 1.15, 5);
   const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
 
