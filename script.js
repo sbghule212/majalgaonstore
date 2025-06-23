@@ -32,7 +32,7 @@ function mround(value, multiple) {
   const msp = mround(purchasePrice * 1.15, 5);
   const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
-  const retailPrice = dpPrice - (dpPrice * 0.2);
+  const retailPrice = Math.round(dpPrice - (dpPrice * 0.2));
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
