@@ -16,7 +16,7 @@ function calculateForward() {
       document.getElementById("ltCustomer").textContent = "-";
     //   document.getElementById("retailPrice").textContent = "-";
     document.getElementById("msp").textContent = "-";
-    document.getElementById("purchasePrice").textContent = "-";
+    // document.getElementById("purchasePrice").textContent = "-";
     return;
   }
 
@@ -35,7 +35,7 @@ function mround(value, multiple) {
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
-  document.getElementById("purchasePrice").textContent = purchasePrice;
+  // document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = msp;
 }
 
