@@ -20,8 +20,8 @@ function calculateForward() {
     return;
   }
 
-  function roundToNearest5(value) {
-  return Math.round(value / 5) * 5;
+function roundUpToNearest5(value) {
+  return Math.ceil(value / 5) * 5;
 }
 
   const base = dpPrice * 0.75;
