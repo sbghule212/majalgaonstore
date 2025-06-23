@@ -14,7 +14,6 @@ function calculateForward() {
   if (isNaN(dpPrice)) {
       document.getElementById("homeShopee").textContent = "-";
       document.getElementById("ltCustomer").textContent = "-";
-      document.getElementById("retailPrice").textContent = "-";
       document.getElementById("msp").textContent = "-";
     // document.getElementById("purchasePrice").textContent = "-";
     return;
@@ -32,38 +31,27 @@ function mround(value, multiple) {
   const msp = mround(purchasePrice * 1.15, 5);
   const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
-  const retailPrice = Math.round(dpPrice - (dpPrice * 0.2));
+  
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
   // document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = msp;
-  document.getElementById("retailPrice").textContent = retailPrice;
 }
 
 function calculateReverse() {
   const onlinePrice = parseFloat(document.getElementById("onlineInput").value);
   if (isNaN(onlinePrice)) {
-    document.getElementById("revDpPrice").textContent = "-";
-    document.getElementById("revMspPrice").textContent = "-";
     document.getElementById("revMsptenPrice").textContent = "-";
-    document.getElementById("revPurchasePrice").textContent = "-";
-    document.getElementById("revPurchaseTenPrice").textContent = "-";
+    document.getElementById("retailPrice").textContent = "-";
     return;
   }
 
-  //  const base = approxDpPrice * 0.75;
-  const oofflinePrice = onlinePrice - 60;
-  const approxDpPrice = Math.round(onlinePrice / 0.9);
-  const approxMspPrice = Math.ceil((1.1 * (onlinePrice - 100)) / 1.3);
   const approxMspTenPrice = Math.ceil((1.1 * (onlinePrice - 10)) / 1.3);
-  const purchasePrice = Math.round((onlinePrice - 200) / 1.15);
+  const retailPrice = Math.round(onlinePrice - (onlinePrice * 0.2));
 
-  document.getElementById("revDpPrice").textContent = approxDpPrice;
-  document.getElementById("revMspPrice").textContent = approxMspPrice;
   document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
-  document.getElementById("revPurchasePrice").textContent = purchasePrice;
-  document.getElementById("revPurchaseTenPrice").textContent = purchaseTenPrice;
+  document.getElementById("retailPrice").textContent = retailPrice;
 }
 
 function generateMessage() {
