@@ -23,12 +23,15 @@ function calculateForward() {
 function mround(value, multiple) {
   return Math.round(value / multiple) * multiple;
 }
+  function roundUpToNearest5(value) {
+  return Math.ceil(value / 5) * 5;
+}
 
   const base = dpPrice * 0.75;
   const purchasePrice = Math.round(dpPrice / 1.5);
-  const msp = mround(purchasePrice * 1.15, 5);
-  const homeShopee = mround(msp * 1.10, 5);
-  const ltCustomer = mround(homeShopee * 1.10, 5);
+  const msp = roundUpToNearest5(purchasePrice * 1.15, 5);
+  const homeShopee = roundUpToNearest5(msp * 1.10, 5);
+  const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
