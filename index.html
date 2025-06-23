@@ -15,7 +15,7 @@
       <button class="tab active" onclick="switchTab('forward')">
         DP > Offer
       </button>
-<!--       <button class="tab" onclick="switchTab('reverse')">Offer > DP</button> -->
+      <button class="tab" onclick="switchTab('reverse')">Offer > DP</button>
       <button class="tab" onclick="switchTab('message')">Post</button>
     </div>
 
@@ -30,7 +30,7 @@
           oninput="calculateForward()" />
         <div class="output">
 <!--           <p><strong>Purchase Price:</strong> <span id="purchasePrice">-</span></p> -->
-          <p><strong>20% Discount:</strong> <span id="retailPrice">-</span></p>
+          
           <p><strong>MSP:</strong> <span id="msp">-</span></p>
           <p><strong>Home Shopee:</strong> <span id="homeShopee">-</span></p>
           <p><strong>L.T. Customer:</strong> <span id="ltCustomer">-</span></p>
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Reverse Calculator -->
-<!--     <div id="reverse" class="tab-content">
+    <div id="reverse" class="tab-content">
       <div class="abc">
         <label for="onlineInput">Enter Price:</label>
         <input
@@ -48,9 +48,7 @@
           placeholder="Enter price"
           oninput="calculateReverse()" />
         <div class="output">
-          <p>
-            <strong>Approx. Dp Price:</strong> <span id="revDpPrice">-</span>
-          </p>
+          <p><strong>20% Discount:</strong> <span id="retailPrice">-</span></p>
           <p><strong>MSP Price:</strong> <span id="revMspPrice">-</span></p>
           <p>
             <strong>MSP10 Price:</strong> <span id="revMsptenPrice">-</span>
@@ -60,7 +58,7 @@
           </p>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Post Generator -->
     <div id="message" class="tab-content">
