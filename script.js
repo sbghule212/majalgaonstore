@@ -100,7 +100,7 @@ function generateMessage() {
   // const totalSale2 = onlineSale + offlineSale + storeSale;
 
   // Get user input values
-  const  = document.getElementById("store3Input").value || "Majalgaon Womens Wear";
+  const store3 = document.getElementById("store3Input").value || "Majalgaon Womens Wear";
   const sareeSale3 =
     parseInt(document.getElementById("sareeSale3Input").value) || 0;
   const otherSale3 =
