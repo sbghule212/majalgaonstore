@@ -26,7 +26,7 @@ function mround(value, multiple) {
 
   const base = dpPrice * 0.75;
   const purchasePrice = mround(dpPrice / 1.5, 5);
-  const msp = mround(taxablePrice * 1.15, 5);
+  const msp = mround(purchasePrice * 1.15, 5);
   const homeShopee = mround(msp * 1.10, 5);
   const ltCustomer = mround(homeShopee * 1.10, 5);
 
