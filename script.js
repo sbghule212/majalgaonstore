@@ -25,7 +25,7 @@ function calculateForward() {
 }
 
   const base = dpPrice * 0.75;
-  const purchasePrice = roundToNearest(dpPrice / 1.5 );
+  const purchasePrice = roundToNearest5(dpPrice / 1.5 );
   const msp = roundToNearest5(purchasePrice * 1.15);
   const homeShopee = roundToNearest5(msp * 1.10);
   const ltCustomer = roundToNearest5(homeShopee * 1.10);
