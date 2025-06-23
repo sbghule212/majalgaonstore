@@ -14,8 +14,8 @@ function calculateForward() {
   if (isNaN(dpPrice)) {
       document.getElementById("homeShopee").textContent = "-";
       document.getElementById("ltCustomer").textContent = "-";
-    //   document.getElementById("retailPrice").textContent = "-";
-    document.getElementById("msp").textContent = "-";
+      document.getElementById("retailPrice").textContent = "-";
+      document.getElementById("msp").textContent = "-";
     // document.getElementById("purchasePrice").textContent = "-";
     return;
   }
@@ -32,11 +32,13 @@ function mround(value, multiple) {
   const msp = mround(purchasePrice * 1.15, 5);
   const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
+  const retailPrice = dpPrice - (dpPrice * 0.2);
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
   // document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = msp;
+  document.getElementById("retailPrice").textContent = msp;
 }
 
 function calculateReverse() {
