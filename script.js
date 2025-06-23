@@ -20,15 +20,15 @@ function calculateForward() {
     return;
   }
 
-function roundToNearest5(value) {
-  return Math.round(value / 5) * 5;
+function mround(value, multiple) {
+  return Math.round(value / multiple) * multiple;
 }
 
   const base = dpPrice * 0.75;
-  const purchasePrice = roundToNearest5(dpPrice / 1.5 );
-  const msp = roundToNearest5(purchasePrice * 1.15);
-  const homeShopee = roundToNearest5(msp * 1.10);
-  const ltCustomer = roundToNearest5(homeShopee * 1.10);
+  const purchasePrice = mround(dpPrice / 1.5, 5);
+  const msp = mround(taxablePrice * 1.15, 5);
+  const homeShopee = mround(msp * 1.10, 5);
+  const ltCustomer = mround(homeShopee * 1.10, 5);
 
   document.getElementById("homeShopee").textContent = homeShopee;
   document.getElementById("ltCustomer").textContent = ltCustomer;
