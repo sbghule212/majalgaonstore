@@ -30,10 +30,10 @@ function calculateForward() {
   const homeShopee = roundToNearest5(msp * 1.10);
   const ltCustomer = roundToNearest5(homeShopee * 1.10);
 
-  document.getElementById("offlinePrice").textContent = homeShopee;
-  document.getElementById("onlinePrice").textContent = ltCustomer;
+  document.getElementById("homeShopee").textContent = homeShopee;
+  document.getElementById("ltCustomer").textContent = ltCustomer;
   document.getElementById("purchasePrice").textContent = purchasePrice;
-  document.getElementById("msp").textContent = mspPrice;
+  document.getElementById("msp").textContent = msp;
 }
 
 function calculateReverse() {
