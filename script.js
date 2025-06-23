@@ -100,12 +100,12 @@ function generateMessage() {
   // const totalSale2 = onlineSale + offlineSale + storeSale;
 
   // Get user input values
+  const  =
+    document.getElementById("store3Input").value || "Majalgaon Womens Wear";
   const sareeSale3 =
     parseInt(document.getElementById("sareeSale3Input").value) || 0;
   const otherSale3 =
     parseInt(document.getElementById("otherSale3Input").value) || 0;
-  // const expenses3 =
-  //   parseInt(document.getElementById("expenses3Input").value) || 0;
 
   const totalSale3 = sareeSale3 + otherSale3;
 
@@ -113,7 +113,7 @@ function generateMessage() {
 
   const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   // const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
-  const majalgaonSale = `*Majalgaon Womens Wear🏪*\n\n${dateStr} ⏰\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
+  const majalgaonSale = `*${store3}🏪*\n\n${dateStr} ⏰\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
   // document.getElementById("messageOutput2").value = customerMsg;
