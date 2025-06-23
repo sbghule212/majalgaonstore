@@ -84,29 +84,28 @@ function generateMessage() {
     parseInt(document.getElementById("sareeSaleInput").value) || 0;
   const otherSale =
     parseInt(document.getElementById("otherSaleInput").value) || 0;
-  const expenses =
-    parseInt(document.getElementById("expensesInput").value) || 0;
+  // const expenses =
+  //   parseInt(document.getElementById("expensesInput").value) || 0;
 
   const totalSale = sareeSale + otherSale;
-  const profit = Math.floor(totalSale * 0.1);
 
-  // Get user input values
-  const onlineSale =
-    parseInt(document.getElementById("onlineSaleInput").value) || 0;
-  const offlineSale =
-    parseInt(document.getElementById("offlineSaleInput").value) || 0;
-  const storeSale =
-    parseInt(document.getElementById("storeSaleInput").value) || 0;
+  // // Get user input values
+  // const onlineSale =
+  //   parseInt(document.getElementById("onlineSaleInput").value) || 0;
+  // const offlineSale =
+  //   parseInt(document.getElementById("offlineSaleInput").value) || 0;
+  // const storeSale =
+  //   parseInt(document.getElementById("storeSaleInput").value) || 0;
 
-  const totalSale2 = onlineSale + offlineSale + storeSale;
+  // const totalSale2 = onlineSale + offlineSale + storeSale;
 
   // Get user input values
   const sareeSale3 =
     parseInt(document.getElementById("sareeSale3Input").value) || 0;
   const otherSale3 =
     parseInt(document.getElementById("otherSale3Input").value) || 0;
-  const expenses3 =
-    parseInt(document.getElementById("expenses3Input").value) || 0;
+  // const expenses3 =
+  //   parseInt(document.getElementById("expenses3Input").value) || 0;
 
   const totalSale3 = sareeSale3 + otherSale3;
 
