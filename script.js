@@ -38,7 +38,7 @@ function mround(value, multiple) {
   document.getElementById("ltCustomer").textContent = ltCustomer;
   // document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = msp;
-  document.getElementById("retailPrice").textContent = msp;
+  document.getElementById("retailPrice").textContent = retailPrice;
 }
 
 function calculateReverse() {
