@@ -25,17 +25,13 @@ function calculateForward() {
 }
 
   const base = dpPrice * 0.75;
-  const purchasePrice = Math.round(dpPrice / 1.5 );
-  const offlinePrice = Math.round(purchasePrice * 1.4);
-  const onlinePrice = Math.round(purchasePrice * 1.3);
-  const retailPrice = offlinePrice + 100;
-  const msp = roundToNearest5(taxablePrice * 1.15);
+  const purchasePrice = roundToNearest(dpPrice / 1.5 );
+  const msp = roundToNearest5(purchasePrice * 1.15);
   const homeShopee = roundToNearest5(msp * 1.10);
   const ltCustomer = roundToNearest5(homeShopee * 1.10);
 
   document.getElementById("offlinePrice").textContent = homeShopee;
   document.getElementById("onlinePrice").textContent = ltCustomer;
-  // document.getElementById("retailPrice").textContent = retailPrice;
   document.getElementById("purchasePrice").textContent = purchasePrice;
   document.getElementById("msp").textContent = mspPrice;
 }
