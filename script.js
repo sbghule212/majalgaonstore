@@ -48,7 +48,7 @@ function calculateReverse() {
   }
 
   const approxMspTenPrice = Math.ceil((1.1 * (onlinePrice - 10)) / 1.3);
-  const retailPrice = Math.round(onlinePrice - (onlinePrice * 0.25));
+  const retailPrice = Math.round(onlinePrice - (onlinePrice * 0.5));
 
   document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
   document.getElementById("retailPrice").textContent = retailPrice;
@@ -112,7 +112,7 @@ function generateMessage() {
 
   // const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   // const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
-  const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr}\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*`;
+  const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*`;
 
   // document.getElementById("messageOutput1").value = distributorMsg;
   // document.getElementById("messageOutput2").value = customerMsg;
