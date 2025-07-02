@@ -128,7 +128,7 @@ function copyMessage(id) {
   alert("Message copied to clipboard!");
 }
 
-function toggleSection(sectionId) {
-  const section = document.getElementById(sectionId);
-  section.style.display = section.style.display === "none" ? "block" : "none";
-}
+// function toggleSection(sectionId) {
+//   const section = document.getElementById(sectionId);
+//   section.style.display = section.style.display === "none" ? "block" : "none";
+// }
