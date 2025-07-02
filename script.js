@@ -55,18 +55,18 @@ function calculateReverse() {
 }
 
 function generateMessage() {
-  const store =
-    document.getElementById("storeInput").value || "Majalgaon Mega Store";
-  const product = document.getElementById("productInput").value || "Jewellery";
-  const dp = parseFloat(document.getElementById("dpInput").value) || 0;
-  const contact = document.getElementById("contactInput").value || "7775034111";
+  // const store =
+  //   document.getElementById("storeInput").value || "Majalgaon Mega Store";
+  // const product = document.getElementById("productInput").value || "Jewellery";
+  // const dp = parseFloat(document.getElementById("dpInput").value) || 0;
+  // const contact = document.getElementById("contactInput").value || "7775034111";
 
-  const base = dp * 0.75;
-  const offline = Math.round(base + base * 0.1);
-  const online = Math.round(dp * 0.9);
-  const retail = offline + 100;
+  // const base = dp * 0.75;
+  // const offline = Math.round(base + base * 0.1);
+  // const online = Math.round(dp * 0.9);
+  // const retail = offline + 100;
 
-  const distributorMsg = `PRATYUSH RETAILS PVT LTD.\n${store}🏪\n\nName - ${product}\n\nPrice - ₹${dp}/-\n\n🔥 FREE SHIPPING🔥\nPremium Quality 100%\n▶ No Cash On Delivery\n▶ No Cancellation Process\n▶ Payment Process \nPhone Pay / Google Pay / Paytm\n▶ When parcel received opening video is Compulsory\n\nBooking Only What's app\n${contact}📲`;
+  // const distributorMsg = `PRATYUSH RETAILS PVT LTD.\n${store}🏪\n\nName - ${product}\n\nPrice - ₹${dp}/-\n\n🔥 FREE SHIPPING🔥\nPremium Quality 100%\n▶ No Cash On Delivery\n▶ No Cancellation Process\n▶ Payment Process \nPhone Pay / Google Pay / Paytm\n▶ When parcel received opening video is Compulsory\n\nBooking Only What's app\n${contact}📲`;
 
   const today = new Date();
   const dateStr = today.toLocaleDateString("en-GB", {
@@ -80,14 +80,14 @@ function generateMessage() {
   });
 
   // Get user input values
-  const sareeSale =
-    parseInt(document.getElementById("sareeSaleInput").value) || 0;
-  const otherSale =
-    parseInt(document.getElementById("otherSaleInput").value) || 0;
+  // const sareeSale =
+  //   parseInt(document.getElementById("sareeSaleInput").value) || 0;
+  // const otherSale =
+  //   parseInt(document.getElementById("otherSaleInput").value) || 0;
   // const expenses =
   //   parseInt(document.getElementById("expensesInput").value) || 0;
 
-  const totalSale = sareeSale + otherSale;
+  // const totalSale = sareeSale + otherSale;
 
   // // Get user input values
   // const onlineSale =
@@ -110,13 +110,13 @@ function generateMessage() {
 
   // const store = document.getElementById("storeInput").value || 0;
 
-  const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
+  // const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   // const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   const majalgaonSale = `*${store3} Womens Wear🏪*\n\n${dateStr} ⏰\n\n*Total Sale = ${totalSale3}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
 
-  document.getElementById("messageOutput1").value = distributorMsg;
+  // document.getElementById("messageOutput1").value = distributorMsg;
   // document.getElementById("messageOutput2").value = customerMsg;
-  document.getElementById("messageOutput3").value = reportMsg;
+  // document.getElementById("messageOutput3").value = reportMsg;
   document.getElementById("messageOutput4").value = majalgaonSale;
 }
 
