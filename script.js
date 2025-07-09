@@ -55,19 +55,15 @@ function calculateReverse() {
 }
 
 function generateMessage() {
-  // const store =
-  //   document.getElementById("storeInput").value || "Majalgaon Mega Store";
-  // const product = document.getElementById("productInput").value || "Jewellery";
-  // const dp = parseFloat(document.getElementById("dpInput").value) || 0;
-  // const contact = document.getElementById("contactInput").value || "7775034111";
+   const store =
+    document.getElementById("storeInput").value || "Majalgaon";
+  const product = document.getElementById("productInput").value || "Saree";
+  const dp = parseFloat(document.getElementById("dpInput").value) || 0;
+  const contact = document.getElementById("contactInput").value || "7775034111";
 
-  // const base = dp * 0.75;
-  // const offline = Math.round(base + base * 0.1);
-  // const online = Math.round(dp * 0.9);
-  // const retail = offline + 100;
+  const retail = dp + 100;
 
-  // const distributorMsg = `PRATYUSH RETAILS PVT LTD.\n${store}🏪\n\nName - ${product}\n\nPrice - ₹${dp}/-\n\n🔥 FREE SHIPPING🔥\nPremium Quality 100%\n▶ No Cash On Delivery\n▶ No Cancellation Process\n▶ Payment Process \nPhone Pay / Google Pay / Paytm\n▶ When parcel received opening video is Compulsory\n\nBooking Only What's app\n${contact}📲`;
-
+  const distributorMsg = `💃💃MW💃💃💃\n${store} Women's Wear\n\nName - ${product}\n\nMRP Price - ₹${retail}/-\n\nOffer Price - ₹${dp}/-\n\nFree Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact}📲`;
   const today = new Date();
   const dateStr = today.toLocaleDateString("en-GB", {
     day: "2-digit",
