@@ -51,7 +51,7 @@ function calculateReverse() {
 
   const retailPrice = Math.round(onlinePrice - (onlinePrice * 0.5));
   const approxMspTenPrice = retailPrice + 60;
-  const dpp = (onlinePrice / 5 ) * 1.25;
+  const dpp = (onlinePrice / 2 ) * 1.25;
 
   document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
   document.getElementById("retailPrice").textContent = retailPrice;
