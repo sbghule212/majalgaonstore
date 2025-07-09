@@ -44,15 +44,18 @@ function calculateReverse() {
   if (isNaN(onlinePrice)) {
     document.getElementById("revMsptenPrice").textContent = "-";
     document.getElementById("retailPrice").textContent = "-";
+    document.getElementById("dpp").textContent = "-";
     return;
   }
 
 
   const retailPrice = Math.round(onlinePrice - (onlinePrice * 0.5));
-    const approxMspTenPrice = retailPrice + 60;
+  const approxMspTenPrice = retailPrice + 60;
+  const dpp = (onlinePrice / 5 ) * 1.25;
 
   document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
   document.getElementById("retailPrice").textContent = retailPrice;
+  document.getElementById("dpp").textContent = dpp;
 }
 
 function generateMessage() {
