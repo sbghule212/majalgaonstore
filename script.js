@@ -64,6 +64,7 @@ function generateMessage() {
   const retail = dp + 100;
 
   const distributorMsg = `💃💃MW💃💃💃\n${store} Women's Wear\n\nName - ${product}\n\nMRP Price - ₹${retail}/-\n\nOffer Price - ₹${dp}/-\n\nFree Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact}📲`;
+  
   const today = new Date();
   const dateStr = today.toLocaleDateString("en-GB", {
     day: "2-digit",
@@ -110,7 +111,7 @@ function generateMessage() {
   // const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*`;
 
-  // document.getElementById("messageOutput1").value = distributorMsg;
+  document.getElementById("messageOutput1").value = distributorMsg;
   // document.getElementById("messageOutput2").value = customerMsg;
   // document.getElementById("messageOutput3").value = reportMsg;
   document.getElementById("messageOutput4").value = majalgaonSale;
