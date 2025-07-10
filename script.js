@@ -26,11 +26,17 @@ function mround(value, multiple) {
   return Math.ceil(value / 5) * 5;
 }
 
+  // const base = dpPrice * 0.75;
+  // const purchasePrice = Math.round(dpPrice / 1.5);
+  // const msp = mround(purchasePrice * 1.15, 5);
+  // const homeShopee = roundUpToNearest5(msp * 1.10, 5);
+  // const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
+
   const base = dpPrice * 0.75;
   const purchasePrice = Math.round(dpPrice / 1.5);
-  const msp = mround(purchasePrice * 1.15, 5);
-  const homeShopee = roundUpToNearest5(msp * 1.10, 5);
-  const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
+  const msp = mround(dpPrice * 0.73, 5);
+  const homeShopee = roundUpToNearest5(dpPrice * 0.81, 5);
+  const ltCustomer = roundUpToNearest5(dpPrice * 0.9, 5);
   
 
   document.getElementById("homeShopee").textContent = homeShopee;
