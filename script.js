@@ -32,11 +32,11 @@ function mround(value, multiple) {
   // const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   // const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
 
-  const base = dpPrice * 0.75;
-  const purchasePrice = Math.round(dpPrice / 1.5);
-  const msp = mround(dpPrice * 0.73, 5);
-  const homeShopee = roundUpToNearest5(dpPrice * 0.81, 5);
-  const ltCustomer = roundUpToNearest5(dpPrice * 0.9, 5);
+  const base = dpPrice - 100;
+  const purchasePrice = Math.round(base / 1.5);
+  const msp = mround(base * 0.73, 5);
+  const homeShopee = roundUpToNearest5(base * 0.81, 5);
+  const ltCustomer = roundUpToNearest5(base * 0.9, 5);
   
 
   document.getElementById("homeShopee").textContent = homeShopee;
