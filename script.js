@@ -9,6 +9,13 @@ function switchTab(tabId) {
   document.getElementById(tabId).classList.add("active");
 }
 
+function mround(value, multiple) {
+  return Math.round(value / multiple) * multiple;
+}
+  function roundUpToNearest5(value) {
+  return Math.ceil(value / 5) * 5;
+}
+
 function calculateForward() {
   const dpPrice = parseFloat(document.getElementById("dpPrice").value);
   if (isNaN(dpPrice)) {
@@ -19,12 +26,7 @@ function calculateForward() {
     return;
   }
 
-function mround(value, multiple) {
-  return Math.round(value / multiple) * multiple;
-}
-  function roundUpToNearest5(value) {
-  return Math.ceil(value / 5) * 5;
-}
+
 
   // const base = dpPrice * 0.75;
   // const purchasePrice = Math.round(dpPrice / 1.5);
