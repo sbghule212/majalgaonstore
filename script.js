@@ -36,7 +36,7 @@ function calculateForward() {
 
   const base = dpPrice - 100;
   const purchasePrice = Math.round(base / 1.5);
-  const msp = mround(base * 0.73, 5);
+  const msp = (mround(base * 0.73, 5)) + 5;
   const homeShopee = roundUpToNearest5(base * 0.81, 5);
   const ltCustomer = roundUpToNearest5(base * 0.9, 5);
   
