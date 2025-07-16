@@ -77,7 +77,7 @@ function generateMessage() {
   const base = dp - 100;
   const ltCustomer = roundUpToNearest5(base * 0.9, 5);
 
-  const distributorMsg = `💃💃MW💃💃💃\n${store} Women's Wear\n\n👗Name - ${product}\n\n💸MRP Price - ₹${dp}/-\n\n💻Online Price - ₹${base}/-\n\n🏪Offline Price - ₹${ltCustomer}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact}📲`;
+  const distributorMsg = `💃💃MW💃💃💃\n${store} Women's Wear\n\nName - ${product}\n\nMRP Price - ₹${dp}/-\n\nOnline Price - ₹${base}/-\n\nOffline Price - ₹${ltCustomer}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact}📲`;
   
   const today = new Date();
   const dateStr = today.toLocaleDateString("en-GB", {
