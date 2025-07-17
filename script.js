@@ -78,6 +78,19 @@ function generateMessage() {
   const ltCustomer = roundUpToNearest5(base * 0.9, 5);
 
   const distributorMsg = `💃💃MW💃💃💃\n${store} Women's Wear\n\nName - ${product}\n\nMRP Price - ₹${dp}/-\n\nOnline Price - ₹${base}/-\n\nOffline Price - ₹${ltCustomer}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact}📲`;
+
+   const store2 =
+    document.getElementById("storeInput2").value || "Majalgaon";
+  const product2 = document.getElementById("productInput2").value || "Jewellery";
+  const dp2 = parseFloat(document.getElementById("dpInput2").value) || 0;
+  const contact2 = document.getElementById("contactInput2").value || "7775034111";
+
+  const retail2 = Math.round(dp2 - (dp2 * 0.5));
+  const base2 = retail2 + 60;
+  const ltCustomer2 = base2 + 100;
+
+  const distributorMsg5 = `💃💃MW💃💃💃\n${store2} Women's Wear\n\nName - ${product2}\n\nMRP Price - ₹${dp2}/-\n\nOnline Price - ₹${base2}/-\n\nOffline Price - ₹${dp2}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact2}📲`;
+  
   
   const today = new Date();
   const dateStr = today.toLocaleDateString("en-GB", {
