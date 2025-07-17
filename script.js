@@ -89,7 +89,7 @@ function generateMessage() {
   const base2 = retail2 + 60;
   const ltCustomer2 = base2 + 100;
 
-  const distributorMsg5 = `💃💃MW💃💃💃\n${store2} Women's Wear\n\nName - ${product2}\n\n🔸MRP Price - ₹${ltCustomer2}/-\n\n🔸Online Price - ₹${base2}/-\n\n🔸Offline Price - ₹${retail2}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact2}📲`;
+  const distributorMsg5 = `💃💃MW💃💃💃\n${store2} Women's Wear\n\nName - ${product2}\n\n🔸MRP Price - ₹${ltCustomer2}/-\n🔸Online Price - ₹${base2}/-\n🔸Offline Price - ₹${retail2}/-\n\n🚚Free Shipping in Maharashtra\nCOD Available 5% extra charges for post\n\nBooking Only What's app\n${contact2}📲`;
   
   
   const today = new Date();
