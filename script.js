@@ -139,6 +139,7 @@ function generateMessage() {
   const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
+  document.getElementById("messageOutput5").value = distributorMsg5;
   // document.getElementById("messageOutput2").value = customerMsg;
   // document.getElementById("messageOutput3").value = reportMsg;
   document.getElementById("messageOutput4").value = majalgaonSale;
