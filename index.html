@@ -103,6 +103,55 @@
         </button>
       </div>
 
+      <div class="abc">
+        <label for="storeInput2">Store Name:</label>
+        <input
+          type="text"
+          id="storeInput2"
+          placeholder="Majalgaon Women's Wear"
+          oninput="generateMessage()" />
+
+        <label for="productInput2">Product Name:</label>
+        <input
+          type="text"
+          id="productInput2"
+          placeholder="Jewellery"
+          oninput="generateMessage()" />
+
+        <label for="dpInput2">MRP Price:</label>
+        <input
+          type="number"
+          id="dpInput"
+          placeholder="1199"
+          oninput="generateMessage()" />
+
+        <label for="contactInput">Contact Number:</label>
+        <input
+          type="text"
+          id="contactInput"
+          placeholder="7775034111"
+          oninput="generateMessage()" />
+
+        <label>Post:</label>
+        <textarea
+          id="messageOutput5"
+          rows="10"
+          readonly
+          style="
+            width: 93%;
+            background: var(--card-bg);
+            color: var(--white);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+          "></textarea>
+        <button onclick="copyMessage('messageOutput5')" class="copybutton">
+          Copy Post
+        </button>
+      </div>
+
+
 <!--       <button
         onclick="toggleSection('saleReport1')"
         class="togglebutton expanded"
