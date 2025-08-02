@@ -34,12 +34,12 @@ function calculateForward() {
   // const homeShopee = roundUpToNearest5(msp * 1.10, 5);
   // const ltCustomer = roundUpToNearest5(homeShopee * 1.10, 5);
 
-  // const base = dpPrice - 100;
-  // const taxablePrice = Math.round(base / 1.54);
-  // const purchasePrice = taxablePrice * 1.05 ;
-  // const msp = roundUpToNearest5(purchasePrice * 1.1, 5);
-  // const homeShopee = roundUpToNearest5(msp * 1.1, 5);
-  // const ltCustomer = roundUpToNearest5(homeShopee * 1.1, 5);
+  const base = dpPrice - 100;
+  const taxablePrice = Math.round(base / 1.54);
+  const purchasePrice = taxablePrice * 1.05 ;
+  const msp = roundUpToNearest5(purchasePrice * 1.1, 5);
+  const homeShopee = roundUpToNearest5(msp * 1.1, 5);
+  const ltCustomer = roundUpToNearest5(homeShopee * 1.1, 5);
   
 
   document.getElementById("homeShopee").textContent = homeShopee;
@@ -158,3 +158,4 @@ function toggleSection(sectionId) {
   const section = document.getElementById(sectionId);
   section.style.display = section.style.display === "none" ? "block" : "none";
 }
+
