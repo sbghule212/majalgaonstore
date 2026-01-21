@@ -138,10 +138,11 @@ function generateMessage() {
   const totalSale3 = sareeSale3 + otherSale3;
 
   // const store = document.getElementById("storeInput").value || 0;
+  // 1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n
 
   // const reportMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale}/-\n2. Jwellery,Purse Sale - ${otherSale}/-\n\n*Total Sale = ${totalSale}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
   // const customerMsg = `*${store.toUpperCase()}🏪*\n\n${dateStr} ⏰\n\n1. Online Sale - ${onlineSale}/-\n2. Offline Sale - ${offlineSale}/-\n3. Store Sale - ${storeSale}/-\n\n*Total Sale = ${totalSale2}/-*\n\n*THANK YOU SO MUCH🥰🙏*`;
-  const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr} ⏰\n\n1. Saree Sale - ${sareeSale3}/-\n2. Jwellery,Purse Sale - ${otherSale3}/-\n\n*Total Sale = ${totalSale3}/-*`;
+  const majalgaonSale = `💃💃MW💃💃💃\n*${store3} Women's Wear*\n\n${dateStr} ⏰\n\n*Total Sale = ${totalSale3}/-*`;
 
   document.getElementById("messageOutput1").value = distributorMsg;
   document.getElementById("messageOutput5").value = distributorMsg5;
@@ -162,5 +163,6 @@ function toggleSection(sectionId) {
   const section = document.getElementById(sectionId);
   section.style.display = section.style.display === "none" ? "block" : "none";
 }
+
 
 
