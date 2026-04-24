@@ -39,11 +39,11 @@ function calculateForward() {
   const purchasePrice = taxablePrice * 1.05 ;
   // const msp = roundUpToNearest5(purchasePrice * 1.1, 5);
   // const homeShopee = roundUpToNearest5(msp * 1.1, 5);
-  const ltCustomer = roundUpToNearest5(homeShopee * 1.1, 5);
+  // const ltCustomer = roundUpToNearest5(homeShopee * 1.1, 5);
 
     const msp = Math.round(purchasePrice * 1.1, 5);
   const homeShopee = Math.round(msp * 1.1, 5);
-  // const ltCustomer = Math.round(homeShopee * 1.1, 5);
+  const ltCustomer = roundUpToNearest5(homeShopee * 1.1, 5);
   
 
   document.getElementById("homeShopee").textContent = homeShopee;
