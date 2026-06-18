@@ -93,12 +93,13 @@ function calculateMrp() {
  
   const purchasePricec = mrpC * 1.05;
   const mspc = Math.ceil(purchasePricec * 1.1);
+  const mspc2 = Math.round(purchasePricec * 1.1);
   const homec = Math.ceil(mspc * 1.1);
-  const homec2 = Math.round(mspc * 1.1);
+  const homec2 = Math.round(mspc2 * 1.1);
   const ltc = Math.ceil(homec * 1.1);
-  const ltc2 = Math.round(homec * 1.1);
+  const ltc2 = Math.round(homec2 * 1.1);
   const premrp = Math.ceil(ltc * 1.1);
-  const premrp2 = Math.round(ltc * 1.1);
+  const premrp2 = Math.round(ltc2 * 1.1);
   const mrp100 = roundUpToNearest5(premrp) + 100;
   const mrp10 = premrp2 + 10;
 
