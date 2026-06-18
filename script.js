@@ -83,6 +83,29 @@ function calculateReverse() {
   document.getElementById("mrp100").textContent = mrp100;
 }
 
+function calculateMrp() {
+  const onlinePrice = parseFloat(document.getElementById("mrpInput").value);
+  if (isNaN(mrpInput)) {
+    document.getElementById("mrp10").textContent = "-";
+    document.getElementById("mrp100").textContent = "-";
+    return;
+  }
+ 
+  const purchasePricec = onlinePrice * 1.05;
+  const mspc = Math.ceil(purchasePricec * 1.1);
+  const homec = Math.ceil(mspc * 1.1);
+  const ltc = Math.ceil(homec * 1.1);
+  const premrp = Math.ceil(ltc * 1.1);
+  const mrp100 = roundUpToNearest5(premrp) + 100;
+  const mrp10 = roundUpToNearest5(premrp) + 10;
+
+  document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
+  document.getElementById("retailPrice").textContent = retailPrice;
+  document.getElementById("dpp").textContent = dpp;
+  document.getElementById("mrp10").textContent = mrp10;
+  document.getElementById("mrp100").textContent = mrp100;
+}
+
 function generateMessage() {
    const store =
     document.getElementById("storeInput").value || "Majalgaon";
