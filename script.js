@@ -97,7 +97,7 @@ function calculateMrp() {
   const ltc = Math.ceil(homec * 1.1);
   const premrp = Math.ceil(ltc * 1.1);
   const mrp100 = roundUpToNearest5(premrp) + 100;
-  const mrp10 = roundUpToNearest5(premrp) + 10;
+  const mrp10 = premrp + 10;
 
   document.getElementById("mrp10").textContent = mrp10;
   document.getElementById("mrp100").textContent = mrp100;
