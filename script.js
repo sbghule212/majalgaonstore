@@ -86,6 +86,7 @@ function calculateReverse() {
 function calculateMrp() {
   const mrpC = parseFloat(document.getElementById("mrpInput").value);
   if (isNaN(mrpC)) {
+    document.getElementById("mspcalc").textContent = "-";
     document.getElementById("mrp10").textContent = "-";
     document.getElementById("mrp100").textContent = "-";
     return;
@@ -105,6 +106,7 @@ function calculateMrp() {
 
   document.getElementById("mrp10").textContent = mrp10;
   document.getElementById("mrp100").textContent = mrp100;
+  document.getElementById("mspcalc").textContent = mspc;
 }
 
 function generateMessage() {
