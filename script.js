@@ -84,14 +84,14 @@ function calculateReverse() {
 }
 
 function calculateMrp() {
-  const onlinePrice = parseFloat(document.getElementById("mrpInput").value);
-  if (isNaN(mrpInput)) {
+  const mrpC = parseFloat(document.getElementById("mrpInput").value);
+  if (isNaN(mrpC)) {
     document.getElementById("mrp10").textContent = "-";
     document.getElementById("mrp100").textContent = "-";
     return;
   }
  
-  const purchasePricec = onlinePrice * 1.05;
+  const purchasePricec = mrpC * 1.05;
   const mspc = Math.ceil(purchasePricec * 1.1);
   const homec = Math.ceil(mspc * 1.1);
   const ltc = Math.ceil(homec * 1.1);
