@@ -15,6 +15,7 @@
       <button class="tab active invisi" onclick="switchTab('forward')"></button>
       <button class="tab" onclick="switchTab('message')">Post</button>
       <button class="tab invisi" onclick="switchTab('reverse')"></button>
+      <button class="tab invisi" onclick="switchTab('mrpcalculate')"></button>
     </div>
 
     <!-- Forward Calculator -->
@@ -49,6 +50,22 @@
           <p><strong>50% Discount:</strong> <span id="retailPrice">-</span></p>
           <p><strong>50%+Shipping Price:</strong> <span id="revMsptenPrice">-</span></p>
           <p><strong>Original:</strong> <span id="dpp">-</span></p>
+          <p><strong>MRP 10:</strong> <span id="mrp10">-</span></p>
+          <p><strong>MRP 100:</strong> <span id="mrp100">-</span></p>
+        </div>
+      </div>
+    </div>
+
+        <!-- MRP Calculator -->
+    <div id="mrpcalculate" class="tab-content">
+      <div class="abc">
+        <label for="onlineInput">Enter Purchase Price:</label>
+        <input
+          type="number"
+          id="mrpInput"
+          placeholder="Enter price"
+          oninput="calculateReverse()" />
+        <div class="output">
           <p><strong>MRP 10:</strong> <span id="mrp10">-</span></p>
           <p><strong>MRP 100:</strong> <span id="mrp100">-</span></p>
         </div>
