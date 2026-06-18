@@ -99,9 +99,6 @@ function calculateMrp() {
   const mrp100 = roundUpToNearest5(premrp) + 100;
   const mrp10 = roundUpToNearest5(premrp) + 10;
 
-  document.getElementById("revMsptenPrice").textContent = approxMspTenPrice;
-  document.getElementById("retailPrice").textContent = retailPrice;
-  document.getElementById("dpp").textContent = dpp;
   document.getElementById("mrp10").textContent = mrp10;
   document.getElementById("mrp100").textContent = mrp100;
 }
