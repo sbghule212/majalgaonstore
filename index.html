@@ -50,8 +50,8 @@
           <p><strong>50% Discount:</strong> <span id="retailPrice">-</span></p>
           <p><strong>50%+Shipping Price:</strong> <span id="revMsptenPrice">-</span></p>
           <p><strong>Original:</strong> <span id="dpp">-</span></p>
-          <p><strong>MRP 10:</strong> <span id="mrp10">-</span></p>
-          <p><strong>MRP 100:</strong> <span id="mrp100">-</span></p>
+          <!-- <p><strong>MRP 10:</strong> <span id="mrp10">-</span></p>
+          <p><strong>MRP 100:</strong> <span id="mrp100">-</span></p> -->
         </div>
       </div>
     </div>
@@ -59,12 +59,12 @@
         <!-- MRP Calculator -->
     <div id="mrpcalculate" class="tab-content">
       <div class="abc">
-        <label for="onlineInput">Enter Purchase Price:</label>
+        <label for="mrpInput">Enter Purchase Price:</label>
         <input
           type="number"
           id="mrpInput"
           placeholder="Enter price"
-          oninput="calculateReverse()" />
+          oninput="calculateMrp()" />
         <div class="output">
           <p><strong>MRP 10:</strong> <span id="mrp10">-</span></p>
           <p><strong>MRP 100:</strong> <span id="mrp100">-</span></p>
